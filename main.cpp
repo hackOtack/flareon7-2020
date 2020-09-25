@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 	DWORD* ( *fun_18FA)() = (DWORD* (*)())(0x18FA + (ULONG_PTR)g_myPE);
 	int (*fun_3D6B)() = (int (*)())(0x3D6B + (ULONG_PTR)g_myPE);
 	int (*fun_3D65)() = (int (*)())(0x3D65 + (ULONG_PTR)g_myPE);
-    int(*Sus)() = NULL;
+        int(*Sus)() = NULL;
 
 
 	v6 = fun_18FA();
