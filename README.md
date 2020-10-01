@@ -16,3 +16,8 @@ Challenge 3:
   - https://medium.com/analytics-vidhya/automate-chrome-dino-game-using-python-pyautogui-and-pil-eeb839005ccf
   - https://www.tautvidas.com/blog/2018/02/automating-basic-tasks-in-games-with-opencv-and-python/
 
+Challenge 5:
+- Reversed only TKApp.dll and wrote a simple .Net file to get the flag
+- Flag will be saved as an image
+- Needed to extrac the runtime.dll resource from the TKApp dll using dnspy
+- Challenge5.sln/Challenge5.cs
