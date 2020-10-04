@@ -1,4 +1,4 @@
-# flareon7-2020
+# flareon7-2020  Solutions 
 
 Notes and code for FlareOn7 2020
 
