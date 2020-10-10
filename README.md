@@ -37,7 +37,8 @@ in our case we had $bin_val_1 = header+keysize(0x20)+sha256(key)
   
   Challenge 7:
   - bufferoverflow in IIS: https://www.exploit-db.com/exploits/41738
-  - decoded alphaneumeric shellcode by writing my own decoded in c to be able to debug it standalone (sdg shows it is connecting to port 4444)
+  - here is the encoder:https://github.com/un4ckn0wl3z/Alpha2-encoder/blob/master/alpha2.c
+  - decoded alphaneumeric shellcode by writing my own decoded in c to be able to debug it as a standalone code (sdg shows it is connecting to port 4444)
   - first shell code receives a 4 byte length input and after xoring it with 'ROXK' determines the length of buffer that needs to be alloctaed (4d7). 
   - first shell code sent to port 4444 from attacker machine can be found from pcap. (first 4 bytes for the first recv func and the rest 4D7 bytes for the second recv function). 
   - it then rc4 decodes the shell code and jump to the second shellcode. 
