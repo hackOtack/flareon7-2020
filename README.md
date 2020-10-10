@@ -33,3 +33,15 @@ in our case we had $bin_val_1 = header+keysize(0x20)+sha256(key)
   - https://www.autoitscript.com/wiki/FAQ#How_can_I_debug_my_script.3F  
   - https://www.autoitscript.com/site/autoit-script-editor/
   - http://www.thefoolonthehill.net/drupal/AutoIt%20Debugger
+  
+  
+  Challenge 7:
+  - bufferoverflow in IIS: https://www.exploit-db.com/exploits/41738
+  - decoded alphaneumeric shellcode by writing my own decoded in c to be able to debug it standalone (sdg shows it is connecting to port 4444)
+  - first shell code receives a 4 byte length input and after xoring it with 'ROXK' determines the length of buffer that needs to be alloctaed (4d7). 
+  - first shell code sent to port 4444 from attacker machine can be found from pcap. (first 4 bytes for the first recv func and the rest 4D7 bytes for the second recv function). 
+  - it then rc4 decodes the shell code and jump to the second shellcode. 
+  
+  - second shellcode reads the content of file c:\\accounts.txt and decodes it using a hardcoded key (intrepidmango) then sends it to port 1337. 
+  - found the decoded value in memory when I was debugging the shell code 
+ 
